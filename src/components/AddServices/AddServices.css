@@ -1,0 +1,4 @@
+.add-services form{
+    display: flex;
+    flex-direction: column;
+}

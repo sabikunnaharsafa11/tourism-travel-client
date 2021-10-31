@@ -1,66 +1,68 @@
 [
     {   
         "id": "1",
-        "title": "Koh Samul",
+        "name": "Koh Samul",
+        "price": "450",
         "paragrap": "Hospital services is a term that refers to medical and surgical services and the supporting laboratories",
         
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuqSk2VKMAhHFpLNyjhl4sr_R0lY_4WUa4vA&usqp=CAU"
     },
     {  
         "id": "2",
-        "title": "Bora Bora",
+        "name": "Bora Bora",
+        "price": "450",
         "paragrap": "Hospital services is a term that refers to medical and surgical services and the supporting laboratories",
         
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu4jBVUbyBigvt9agHZJybB8UbhOJeeA7cjQ&usqp=CAU" 
     },
     {  
         "id": "3",
-        "title": "Maldives",
+        "name": "Maldives",
+        "price": "450",
         "paragrap": "Hospital services is a term that refers to medical and surgical services and the supporting laboratories",
         
         "img": "https://www.angelfish.travel/images/highres/289_640_moofushi_beach1.jpg" 
     },
     {   
         "id": "4",
-        "title": "Sunset view",
+        "name": "Sunset view",
+        "price": "450",
         "paragrap": "Hospital services is a term that refers to medical and surgical services and the supporting laboratories",
         
-        "img": "https://lh3.googleusercontent.com/proxy/HyO-ob-LZ45FoXUJjBzEdZEK6UT6n3647xcNrgJ6VEkUrJ63nPTrB1Ztkc8viZ_mZCpqjXsuwqBrQu3WPvtcZxp_6GlVgE0" 
+        "img": "https://cdn4.vectorstock.com/i/1000x1000/87/53/sunset-view-in-beach-with-palm-tree-vector-2358753.jpg" 
     },
     {   
         "id": "5",
-        "title": "Pain Management",
+        "name": "",
+        "price": "450",
         "paragrap": "Hospital services is a term that refers to medical and surgical services and the supporting laboratories",
         
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTymF-BBjksYdi9YI6CDPiIFPxeiuuoo7S-OER_ANkURKAYekf4Xp5IiO3D7OUl5yfZ9vw&usqp=CAU" 
+        "img": "https://vromonguide.com/wp-content/uploads/bandarban-tour-plan-770x420.jpg" 
     },
     {  
         "id": "6",
-        "title": "Physical Medicine",
+        "name": "",
+        "price": "450",
         "paragrap": "Hospital services is a term that refers to medical and surgical services and the supporting laboratories",
         
-        "img": "https://static.facegfx.com/2012/hd-doctor-pictures-download_963292626.jpg" 
+        "img": "https://www.travelmate.com.bd/wp-content/uploads/2021/05/Suptadhara-Waterfall-Sitakunda.jpg" 
     },
     {   
         "id": "7",
-        "title": "Surgery",
+        "name": "Surgery",
+        "price": "450",
         "paragrap": "Hospital services is a term that refers to medical and surgical services and the supporting laboratories",
         
         "img": "https://www.seekpng.com/png/detail/32-324179_lady-doctor-png-lady-doctor-images-png.png" 
     },
     {   
         "id": "8",
-        "title": "Anti Aging",
+        "name": "Anti Aging",
+        "price": "450",
         "paragrap": "Hospital services is a term that refers to medical and surgical services and the supporting laboratories",
         
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVryoeg17PTPZWKe1clYePm2xfA8i_nZkT849vE33UPd0O7XTA4t1H_pfBjNmlvwv0B4w&usqp=CAU"   
-    },
-    {   
-        "id": "9",
-        "title": "Cosmetic",
-        "paragrap": "Hospital services is a term that refers to medical and surgical services and the supporting laboratories",
-        
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLedTyJAf_U1f1LSisGWANnyQc0IuoZL8XobvLRocsnUyHJVIjsXKWma4kOyhYvM8Y1b8&usqp=CAU" 
     }
+    
     
 ]

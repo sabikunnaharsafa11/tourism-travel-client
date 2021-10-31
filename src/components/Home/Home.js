@@ -5,7 +5,7 @@ import TravelServicesCart from '../TravelServicesCart/TravelServicesCart';
 const Home = () => {
     const [services, setService] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/travel')
+        fetch('http://localhost:5000/services')
         .then(res => res.json())
         .then(data => setService(data))
     },[])

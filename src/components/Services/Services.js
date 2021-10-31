@@ -4,7 +4,7 @@ import TravelServicesCart from '../TravelServicesCart/TravelServicesCart';
 const Services = () => {
     const [services, setservices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/travel')
+        fetch('http://sheltered-headland-24418.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setservices(data))
     },[])

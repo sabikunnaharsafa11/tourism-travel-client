@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import logo from './../../img/images1.png'
 import './Header.css'
@@ -20,7 +20,7 @@ const Header = () => {
                 fontWeight: "bold",
                 color:"bule",
                 textDecoration:'block'
-              }} className="nav-link" aria-current="page"> Home</NavLink>                        
+              }} className="nav-link" aria-current="page"> Home</NavLink>    
                         
             <NavLink to="/services"  activeClassName="selected"
             activeStyle={{
@@ -35,13 +35,23 @@ const Header = () => {
                 textDecoration: 'block'
               }} className="nav-link" >About</NavLink>
                                           
-             <NavLink to="/contactus"  activeClassName="selected"
+             <NavLink to="/contact"  activeClassName="selected"
             activeStyle={{
                 fontWeight: "bold",
                 color: "bule",
                 textDecoration: 'block'
               }} className="nav-link">Contact Us</NavLink>
-
+              
+           <div class="dropdown">
+     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+   Admin
+  </button>
+  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+    <li><Link className="dropdown-item active"to="/addServices" >AddServices</Link></li>
+    <li><Link className="dropdown-item active"to="/myOrders" >MyOrders</Link></li>
+    <li><Link className="dropdown-item active"to="/manageAllOrders" >ManageAllOrders</Link></li>
+   </ul>
+  </div>
                
 { user.email && <span style={{color:'black'}}> Hey {user.displayName} </span>}
        
