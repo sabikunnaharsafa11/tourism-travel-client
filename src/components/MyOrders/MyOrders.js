@@ -16,7 +16,7 @@ const MyOrder = () => {
     
     const isConfirm = window.confirm("Are you sure...?");
     if (isConfirm) {
-      fetch(`http://sheltered-headland-24418.herokuapp.com/deleteOrder/${id}`, {
+      fetch(`http://sheltered-headland-24418.herokuapp.com/deleteOrders/${id}`, {
         method: "DELETE",
         headers: { "content-type": "application/json" },
       })
@@ -45,7 +45,7 @@ const MyOrder = () => {
                   <th scope="col">No</th>
                   <th scope="col">Name</th>
                   <th scope="col">Email</th>
-                  <th scope="col">Title</th>
+                  <th scope="col"></th>
                   <th scope="col">Price</th>
                 </tr>
               </thead>

@@ -6,7 +6,7 @@ const Login = () => {
     const location = useLocation();
     const history = useHistory();
     const {singInUsingGoogle} = useAuth();
-    const uri = location?.state.from || '/home';
+    const uri = location?.state?.from || '/home';
     console.log(history,uri)
     const handleSignIn = () => {
         singInUsingGoogle()

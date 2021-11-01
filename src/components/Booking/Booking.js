@@ -10,7 +10,7 @@ const Booking = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
  
    useEffect(() => {
-        fetch(`http://sheltered-headland-24418.herokuapp.com/service/${serviceId}`)
+        fetch(`http://sheltered-headland-24418.herokuapp.com/services/${serviceId}`)
         .then(res => res.json())
         .then(data => setService(data));
           
@@ -29,37 +29,73 @@ const Booking = () => {
     } 
 //    
     return (
-          <div>
-           <div className="container  mt-5 mb-5">
-            <div className="row col-md-4 ">
-            <div class="card w-20% h-20%">
-              <h3>this is bokking: {serviceId}</h3>
-            <img src={service.img} class="card-img-top" alt="..." />
-            <h4>{service.name}</h4>
-            <h4>Price: { service.price}</h4>
-            {/* <h4>{service.title}</h4> */}
-            <div class="card-body">
-              <p class="card-text">{service.paragrap}</p>
+      <div className="container my-5">
+      <div className="row">
+        <div className="col-lg-5 col-md-7 col-sm-12">
+          <div className="card">
+            <img src={service.img} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <h5 className="card-title">{service.name}</h5>
+              <h5 className="card-title">{service.price}</h5>
+              <p className="card-text">{service.description}</p>
             </div>
           </div>
-            </div>
-            <div className="row col-md- " >
-            <form onSubmit={handleSubmit(onSubmit)}>
-      <input className="p-2 m-2"  placeholder="name" {...register("name")} />
-        <br />
-        <input className="p-2 m-2"  placeholder="email" {...register("email")} />
-        <br />
-      <input type="number" className="p-2 m-2"  placeholder="price" {...register("price")} />    
-      <br />
-      {errors.exampleRequired && <span>This field is required</span>}
-      <br />
-
-      <input className="btn btn-danger  " type="submit" />
-    </form>
-            </div>
-            </div>
-            </div>
-           
+        </div>
+        <div className="col-lg-6">
+        
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <input
+              className="p-2 m-2 form-control"
+              placeholder="name"
+              {...register("name")}
+              value = {user.displayName}
+              readOnly
+            />
+            <br />
+            <input
+              className="p-2 m-2 form-control"
+              placeholder="email"
+              {...register("email")}
+              value = {user.email}
+              readOnly
+            />
+            <br />
+            <input
+              type="text"
+              className="p-2 m-2 form-control"
+              placeholder="name"
+              {...register("name")}
+              value = {service.name}
+              readOnly
+            />
+            <br />
+            <input
+              type="number"
+              className="p-2 m-2 form-control"
+              placeholder="price"
+              {...register("price")}
+            />
+            <br />
+            <input
+              type="text"
+              className="p-2 m-2 form-control"
+              placeholder="Adress"
+              {...register("Adress")}
+            />
+            <br />
+            {!service.name ? (
+              <button type="submit" className="btn btn-success" disabled>
+                Purchase Now
+              </button>
+            ) : (
+              <button type="submit" className="btn btn-success">
+                Purchase Now
+              </button>
+            )}
+          </form>
+        </div>
+      </div>
+    </div>
     
     );
 };

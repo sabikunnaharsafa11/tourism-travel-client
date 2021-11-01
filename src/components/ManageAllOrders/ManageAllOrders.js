@@ -1,70 +1,81 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import useAuth from '../../hooks/useAuth'
 
 const ManageAllOrders = () => {
-    const [services, setServices] = useState([]);
-    useEffect(() =>{
-         fetch('http://sheltered-headland-24418.herokuapp.com/services')
-         .then(res => res.json())
-         .then(data => setServices(data))
-    } ,[]);
-
-     const handleDelete = id => {
-         const url = `http://sheltered-headland-24418.herokuapp.com/services/${id}`;
-         fetch(url, {
-            method: "DELETE",
-            // headers: {"Content-Type":"application/json"},
-            // body: JSON.stringify(data)
-        
-         })
-         .then((res) => res.json())
-        .then((data) => {    
-        console.log(data) 
-        if(data.deletedCount){  
-            alert('deleted')
-            const remaining = services.filter(service => service._id !== id);
-            setServices(remaining);
-        }
-
-    });
-           
-     }
-
-    return (
+  const [orders, setOrders] = useState();
+  const { user } = useAuth();
+  useEffect(() => {
+   
+    fetch(`http://sheltered-headland-24418.herokuapp.com/orders`)
+      .then((res) => res.json())
+      .then((data) => setOrders(data))
+    //   .finally(()=> setIsloading(false));
+  }, [user.email]);
+  const handleDelete = (id) => {
     
-        <div>
-            <h3 className="text-center">Manage All Orders</h3>
-          
-            
-          
-             {
-                 services.map(service => <di key={service._id}>
-                       <div className="container d-flex justify-content-center mt-5 mb-5">
-                        <div className="row col-md-3 w-100% h-100%"> 
-                        <div class="card ">
-                        <img src={service.img} class="card-img-top" alt="..." />  
-                          <h3>{service.name}</h3>
-                          <h4>{service.price}</h4>
-
-                          <div >
-                          <button className=" btn btn-danger btn2 mb-3 " onClick={() => handleDelete(service._id)}>Delect</button>
-                          </div>
-
-                          </div>
-                          </div>
-                         
-                          </div>
-                          
-                 </di>)
-             }
-           
-            <div class="card-body">
-              <p class="card-text"></p>
-            </div>
+    const isConfirm = window.confirm("Are you sure...?");
+    if (isConfirm) {
+      fetch(`http://sheltered-headland-24418.herokuapp.com/deleteOrders/${id}`, {
+        method: "DELETE",
+        headers: { "content-type": "application/json" },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if(data.deletedCount){
+            const remaining = orders.filter((order) => order._id !== id);
+            setOrders(remaining);
+          }
+         
+        });
+    }
+  };
+  
+  return (
+    <div>
+      <h3 className="text-center text-uppercase my-4">
+        your {orders?.length} orders
+      </h3>
+      <div className="container">
+        <div className="row align-items-center justify-content-center">
+          <div className="col-lg-8 table-responsive">
+            <table className="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                {orders
+                  ? orders?.map((order, index) => (
+                      <tr key={index}>
+                        <th scope="row">{index + 1}</th>
+                        <td>{order.name}</td>
+                        <td>{order.email}</td>
+                        <td>{order.title}</td>
+                        <td>${order.price}</td>
+                        <td>
+                          <button
+                            className="btn btn-sm btn-danger"
+                            onClick={() => handleDelete(order?._id)}
+                          >
+                            Delete
+                          </button>
+                        </td>
+                      </tr>
+                    ))
+                  : ""}
+              </tbody>
+            </table>
           </div>
-            
-        
-        
-    );
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default ManageAllOrders;
