@@ -7,7 +7,7 @@ const MyOrder = () => {
   const { user } = useAuth();
   useEffect(() => {
    
-    fetch(`http://sheltered-headland-24418.herokuapp.com/orders/${user.email}`)
+    fetch(`https://sheltered-headland-24418.herokuapp.com/orders/${user.email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data))
     //   .finally(()=> setIsloading(false));

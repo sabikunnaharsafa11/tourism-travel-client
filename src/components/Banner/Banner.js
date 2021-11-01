@@ -1,5 +1,5 @@
 import React from 'react';
-import bannerbg from './../../img/bg1.jpg'
+import bannerbg from './../../img/download.jpg'
 
 const Banner = () => {
     const bannerStyle = {
@@ -8,13 +8,13 @@ const Banner = () => {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         width: '100%',
-        height: '450px',
+        height: '500px',
 
     }
     return (
         <div style={bannerStyle}>
            <div className="container mb-5">
-                 <h1>life is Travel</h1>
+                 <h1 className="text-center">Tourism & Travel</h1>
            </div>
         </div>
     );

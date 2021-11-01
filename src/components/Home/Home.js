@@ -5,13 +5,14 @@ import TravelServicesCart from '../TravelServicesCart/TravelServicesCart';
 const Home = () => {
     const [services, setService] = useState([]);
     useEffect(() => {
-        fetch('http://sheltered-headland-24418.herokuapp.com/services')
+        fetch('https://sheltered-headland-24418.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setService(data))
     },[])
     return (
         <div>
             <Banner></Banner>
+    <h2 className="text-center mt-5">Our Services</h2>
        <div className="container">
          <div className="row mt-5 mb-5"> 
          <div className="col-lg-12">

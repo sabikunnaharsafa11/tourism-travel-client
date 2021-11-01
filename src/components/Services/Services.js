@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import TravelServicesCart from '../TravelServicesCart/TravelServicesCart';
 
 const Services = () => {
-    const [services, setservices] = useState([]);
+    const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://sheltered-headland-24418.herokuapp.com/services')
+        fetch('https://sheltered-headland-24418.herokuapp.com/services')
         .then(res => res.json())
-        .then(data => setservices(data))
+        .then(data => setServices(data))
     },[])
     return (
         <div>

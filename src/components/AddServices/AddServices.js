@@ -4,7 +4,7 @@ const AddServices = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => { 
         console.log(data);    
-        fetch(`http://sheltered-headland-24418.herokuapp.com/services`, {
+        fetch('https://sheltered-headland-24418.herokuapp.com/services', {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(data),

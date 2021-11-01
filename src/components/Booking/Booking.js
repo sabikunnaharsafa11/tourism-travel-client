@@ -10,14 +10,14 @@ const Booking = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
  
    useEffect(() => {
-        fetch(`http://sheltered-headland-24418.herokuapp.com/services/${serviceId}`)
+        fetch(`https://sheltered-headland-24418.herokuapp.com/services/${serviceId}`)
         .then(res => res.json())
         .then(data => setService(data));
           
       }, []);
 
     const onSubmit = data => {     
-        fetch('http://sheltered-headland-24418.herokuapp.com/orders', {
+        fetch('https://sheltered-headland-24418.herokuapp.com/orders', {
             method: "POST",
             headers: {"Content-Type":"application/json"},
             body: JSON.stringify(data),

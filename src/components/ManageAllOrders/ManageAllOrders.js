@@ -7,7 +7,7 @@ const ManageAllOrders = () => {
   const { user } = useAuth();
   useEffect(() => {
    
-    fetch(`http://sheltered-headland-24418.herokuapp.com/orders`)
+    fetch('https://sheltered-headland-24418.herokuapp.com/orders')
       .then((res) => res.json())
       .then((data) => setOrders(data))
     //   .finally(()=> setIsloading(false));
@@ -16,7 +16,7 @@ const ManageAllOrders = () => {
     
     const isConfirm = window.confirm("Are you sure...?");
     if (isConfirm) {
-      fetch(`http://sheltered-headland-24418.herokuapp.com/deleteOrders/${id}`, {
+      fetch(`https://sheltered-headland-24418.herokuapp.com/deleteOrders/${id}`, {
         method: "DELETE",
         headers: { "content-type": "application/json" },
       })
