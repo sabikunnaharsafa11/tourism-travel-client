@@ -20,7 +20,7 @@ const AddServices = () => {
     } 
     return (
         <div>
-            <h3 className="text-center">Add Services</h3>
+            <h3 className="text-center">ADD SERVICES</h3>
           <div className="container d-flex justify-content-center mb-5">
           <form onSubmit={handleSubmit(onSubmit)}>
       <input className="p-2 m-2"  placeholder="name" {...register("name")} />
@@ -34,7 +34,7 @@ const AddServices = () => {
       {errors.exampleRequired && <span>This field is required</span>}
       <br />
 
-      <input className="btn btn-danger  " type="submit" />
+      <input className="btn btn-primary" type="submit" />
     </form>
           </div>
             

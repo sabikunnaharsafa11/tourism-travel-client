@@ -6,7 +6,7 @@ const Contact = () => {
       <section className="mb-4">
         <div className="container">
           <h3 className="h1-responsive fw-bold text-uppercase text-center my-4">
-            contact <span className = 'text-warning'>us</span>
+            Contact Us
           </h3>
 
          
@@ -79,7 +79,7 @@ const Contact = () => {
               </form>
 
               <div className="text-start">
-                <button className="btn btn-warning btn-bg mt-3">Send Messege</button>
+                <button className="btn btn-primary btn-bg mt-3">Submit</button>
               </div>
               <div className="status"></div>
             </div>
@@ -87,18 +87,13 @@ const Contact = () => {
             <div className="col-md-3 text-center">
               <ul className="list-unstyled mb-0">
                 <li>
-                  <i className="fas fa-map-marker-alt fa-2x"></i>
-                  <p>San Francisco, CA 94126, USA</p>
-                </li>
-
-                <li>
                   <i className="fas fa-phone mt-4 fa-2x"></i>
-                  <p>+ 01 234 567 89</p>
+                  <p>+ 01 245 678 89</p>
                 </li>
 
                 <li>
                   <i className="fas fa-envelope mt-4 fa-2x"></i>
-                  <p>contact@dippal.com</p>
+                  <p>contact@safa</p>
                 </li>
               </ul>
             </div>

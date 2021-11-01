@@ -61,15 +61,6 @@ const Booking = () => {
             />
             <br />
             <input
-              type="text"
-              className="p-2 m-2 form-control"
-              placeholder="name"
-              {...register("name")}
-              value = {service.name}
-              readOnly
-            />
-            <br />
-            <input
               type="number"
               className="p-2 m-2 form-control"
               placeholder="price"
@@ -79,16 +70,16 @@ const Booking = () => {
             <input
               type="text"
               className="p-2 m-2 form-control"
-              placeholder="Adress"
-              {...register("Adress")}
+              placeholder="Address"
+              {...register("Address")}
             />
             <br />
             {!service.name ? (
-              <button type="submit" className="btn btn-success" disabled>
+              <button type="submit" className="btn btn-primary" disabled>
                 Purchase Now
               </button>
             ) : (
-              <button type="submit" className="btn btn-success">
+              <button type="submit" className="btn btn-primary">
                 Purchase Now
               </button>
             )}

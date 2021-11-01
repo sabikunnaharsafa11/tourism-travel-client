@@ -42,16 +42,19 @@ const Header = () => {
                 textDecoration: 'block'
               }} className="nav-link">Contact Us</NavLink>
               
-           <div class="dropdown">
-     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-   Admin
-  </button>
-  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-    <li><Link className="dropdown-item active"to="/addServices" >AddServices</Link></li>
-    <li><Link className="dropdown-item active"to="/myOrders" >MyOrders</Link></li>
-    <li><Link className="dropdown-item active"to="/manageAllOrders" >ManageAllOrders</Link></li>
-   </ul>
-  </div>
+        
+
+<div class="nav-item dropdown">
+          <Link class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Admin
+          </Link>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><Link className="dropdown-item "to="/addServices" >AddServices</Link></li>
+          <li><Link className="dropdown-item "to="/myOrders" >MyOrders</Link></li>
+          <li><Link className="dropdown-item "to="/manageAllOrders" >ManageAllOrders</Link></li>
+            
+          </ul>
+        </div>
                
 { user.email && <span style={{color:'black'}}> Hey {user.displayName} </span>}
        

@@ -14,6 +14,7 @@ import Booking from './components/Booking/Booking';
 import ManageAllOrders from './components/ManageAllOrders/ManageAllOrders';
 import MyOrders from './components/MyOrders/MyOrders';
 import Contact from './components/Contact/Contact';
+import About from './components/About/About';
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
           </Route>   
           <Route exact path="/services">
          <Services></Services>
+          </Route>
+          <Route exact path="/about">
+         <About></About>
           </Route>
           <PrivateRoute exact path="/contact">
          <Contact></Contact>
